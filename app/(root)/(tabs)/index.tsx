@@ -10,6 +10,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
+      <Text className="font-bold text-xl py-5">Welcome to React Native</Text>
       <Link href={"/explore"}>Explore</Link>
       <Link href={"/profile"}>Profile</Link>
       <Link href={"/sign-in"}>Sign Up</Link>
