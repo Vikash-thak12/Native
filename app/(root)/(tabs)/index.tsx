@@ -1,5 +1,23 @@
 import { Link } from "expo-router";
 import { Text, View } from "react-native";
+const links = [
+  {
+    name: "Explore",
+    link: "/explore"
+  },
+  {
+    name: "Profile",
+    link: "/profile"
+  },
+  {
+    name: "Sign Up",
+    link: "/sign-in"
+  },
+  {
+    name: "Property",
+    link: "/properties/5"
+  },
+]
 
 export default function Index() {
   return (
@@ -11,10 +29,13 @@ export default function Index() {
       }}
     >
       <Text className="font-bold text-xl py-5">Welcome to React Native</Text>
-      <Link href={"/explore"}>Explore</Link>
-      <Link href={"/profile"}>Profile</Link>
-      <Link href={"/sign-in"}>Sign Up</Link>
-      <Link href={"/properties/5"}>Property</Link>
+      <View className="flex gap-5 flex-col p-5 rounded-md">
+        {
+          links.map((item) => (
+            <Link key={item.name} href={item.link} className="bg-gray-300 px-5 py-4 rounded-lg">{item.name}</Link>
+          ))
+        }
+      </View>
     </View>
   );
 }
