@@ -28,11 +28,11 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="font-bold text-xl py-5">Welcome to React Native</Text>
+      <Text className="font-bold text-xl py-5 font-rubik">Welcome to React Native</Text>
       <View className="flex gap-5 flex-col p-5 rounded-md">
         {
           links.map((item) => (
-            <Link key={item.name} href={item.link} className="bg-gray-300 px-5 py-4 rounded-lg">{item.name}</Link>
+            <Link key={item.name} href={item.link} className="bg-gray-300 px-5 py-4 rounded-lg font-rubik">{item.name}</Link>
           ))
         }
       </View>
